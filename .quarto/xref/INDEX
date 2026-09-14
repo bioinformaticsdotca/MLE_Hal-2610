@@ -1,0 +1,33 @@
+{
+  "index.qmd": {
+    "index.html": "35dbd906"
+  },
+  "about.qmd": {
+    "about.html": "699c5f0b"
+  },
+  "faculty.qmd": {
+    "faculty.html": "86989ca6"
+  },
+  "module-1.ipynb": {
+    "module-1.html": "8643c160",
+    "module-1.out.ipynb": "87dbf68d"
+  },
+  "module-2.ipynb": {
+    "module-2.html": "89a04ffb"
+  },
+  "module-4.ipynb": {
+    "module-4.html": "f5d6eaa4"
+  },
+  "module-5.ipynb": {
+    "module-5.html": "3cfbcf30"
+  },
+  "module-6.ipynb": {
+    "module-6.html": "44054d6d"
+  },
+  "module-7.ipynb": {
+    "module-7.html": "3f5e6964"
+  },
+  "module-3.ipynb": {
+    "module-3.html": "aaa80706"
+  }
+}

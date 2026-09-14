@@ -1,0 +1,286 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Machine Learning Foundations: Halifax, NS",
+    "section": "",
+    "text": "Welcome to the (2026) Machine Learning Foundations Halifax NS Canadian Bioinformatics Workshop webpage!\n\n\nYou can find your pre-work here.",
+    "crumbs": [
+      "Workshop Info"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Machine Learning Foundations: Halifax, NS",
+    "section": "Schedule",
+    "text": "Schedule",
+    "crumbs": [
+      "Workshop Info"
+    ]
+  },
+  {
+    "objectID": "index.html#pre-work",
+    "href": "index.html#pre-work",
+    "title": "Machine Learning Foundations: Halifax, NS",
+    "section": "Pre-work",
+    "text": "Pre-work\nYou can find your pre-work here.",
+    "crumbs": [
+      "Workshop Info"
+    ]
+  },
+  {
+    "objectID": "faculty.html",
+    "href": "faculty.html",
+    "title": "Meet Your Faculty",
+    "section": "",
+    "text": "Postdoctoral Fellow Dalhousie University Halifax, Nova Scotia, Canada\n— gustavo.sganzerla@dal.ca\n\nGustavo works at the very intersection between computer science and biology. His main research interests involve the development of Artificial Intelligence frameworks for gathering insights in data from biological nature such as gene regulation in microorganisms (bacteria and archaea) and viruses. Having learned biology from biologists, Gustavo sees teaching computational methods as a way of giving back to the scientific community that shaped his interdisciplinary perspective. As as native software engineer, Gustavo is interested in making complex research methodologies easily accessible to those not familiar with the functioning of computers.\n\n\n\n\n\nResearch Scientist Dalhousie University Halifax, Nova Scotia, Canada\n— zahra.sadeghi@dal.ca\n\nDr. Zahra Sadeghi is a Machine Learning Research Scientist at Dalhousie University and has professional experience in AI and Machine Learning. With a PhD in AI and years of professional experience spanning both academia and industry, complemented by a strong track record of publications and research leadership, she has extensive expertise in advanced AI techniques and their application across a range of domains, including Computer VIsion, Natural Language Processing, Cognitive Science, and Climate modeling.\n\n\n\n\n\nGraduate Student Dalhousie University Halifax, Nova Scotia, Canada\n— mc295857@dal.ca\n\nMackenzie Tapp recently graduated from Dalhousie University with an Honours Co-Op Bachelor of Computer Science, with a minor in statistics and a certificate in intelligent systems. Throughout her undergraduate degree, she has participated in research involving computer vision, natural language processing, and speech diarization. She has recently begun a Masters of Applied Science in Biomedical Engineering at Dalhousie University, where she will be investigating applications of machine learning algorithms in neuroscience.\n\n\n\n\n\nPhD Candidate Dalhousie University Halifax, Nova Scotia, Canada\n— dy970485@dal.ca\n\nDmytro works at the intersection of genomics and machine learning, using deep learning models to study complex symbiotic relationships between microbial and eukaryotic organisms, and between eukaryotes themselves. His bioinformatics background spans undergraduate and graduate training, including research applying computer vision and feature selection to biological data, and industry experience developing data-efficient neural network models to optimize treatment response in personalized cancer therapy. He is drawn to questions difficult to formalize computationally and is passionate about pushing the frontier of what machine learning can answer in biology.",
+    "crumbs": [
+      "Meet Your Faculty"
+    ]
+  },
+  {
+    "objectID": "faculty.html#instructors",
+    "href": "faculty.html#instructors",
+    "title": "Meet Your Faculty",
+    "section": "",
+    "text": "Postdoctoral Fellow Dalhousie University Halifax, Nova Scotia, Canada\n— gustavo.sganzerla@dal.ca\n\nGustavo works at the very intersection between computer science and biology. His main research interests involve the development of Artificial Intelligence frameworks for gathering insights in data from biological nature such as gene regulation in microorganisms (bacteria and archaea) and viruses. Having learned biology from biologists, Gustavo sees teaching computational methods as a way of giving back to the scientific community that shaped his interdisciplinary perspective. As as native software engineer, Gustavo is interested in making complex research methodologies easily accessible to those not familiar with the functioning of computers.\n\n\n\n\n\nResearch Scientist Dalhousie University Halifax, Nova Scotia, Canada\n— zahra.sadeghi@dal.ca\n\nDr. Zahra Sadeghi is a Machine Learning Research Scientist at Dalhousie University and has professional experience in AI and Machine Learning. With a PhD in AI and years of professional experience spanning both academia and industry, complemented by a strong track record of publications and research leadership, she has extensive expertise in advanced AI techniques and their application across a range of domains, including Computer VIsion, Natural Language Processing, Cognitive Science, and Climate modeling.\n\n\n\n\n\nGraduate Student Dalhousie University Halifax, Nova Scotia, Canada\n— mc295857@dal.ca\n\nMackenzie Tapp recently graduated from Dalhousie University with an Honours Co-Op Bachelor of Computer Science, with a minor in statistics and a certificate in intelligent systems. Throughout her undergraduate degree, she has participated in research involving computer vision, natural language processing, and speech diarization. She has recently begun a Masters of Applied Science in Biomedical Engineering at Dalhousie University, where she will be investigating applications of machine learning algorithms in neuroscience.\n\n\n\n\n\nPhD Candidate Dalhousie University Halifax, Nova Scotia, Canada\n— dy970485@dal.ca\n\nDmytro works at the intersection of genomics and machine learning, using deep learning models to study complex symbiotic relationships between microbial and eukaryotic organisms, and between eukaryotes themselves. His bioinformatics background spans undergraduate and graduate training, including research applying computer vision and feature selection to biological data, and industry experience developing data-efficient neural network models to optimize treatment response in personalized cancer therapy. He is drawn to questions difficult to formalize computationally and is passionate about pushing the frontier of what machine learning can answer in biology.",
+    "crumbs": [
+      "Home",
+      "Meet Your Faculty"
+    ]
+  },
+  {
+    "objectID": "faculty.html#teaching-assistants",
+    "href": "faculty.html#teaching-assistants",
+    "title": "Meet Your Faculty",
+    "section": "Teaching Assistants",
+    "text": "Teaching Assistants\n\nSophie Mockly (Montréal) (she/her)\n\n\nPostdoctoral Fellow  IRCM  Montréal, QC, Canada\n\nSophie Mockly is a Postdoctoral Fellow at the Montreal Clinical Research Institute (IRCM), where her research focuses on non-coding RNAs using a combination of wet-lab and dry-lab approaches. She obtained her PhD in Molecular Biology from the University of Montpellier (France), developing expertise in transcriptome analysis, small RNA-seq, and sequence conservation analysis for miRNA target prediction. In late 2022, she started a Postdoctoral Fellowship at the IRCM, where she uses short-read and long-read sequencing to study the lncRNAs and their role in cancer.\n\n\nSophie Ehresmann (Montréal)\n\n\nPhD Candidate  IRCM, Université de Montréal  Montréal, QC, Canada\n\nSophie Ehresmann is a PhD candidate at the Montreal Clinical Research Institute (IRCM) in the RNA and Noncoding Mechanisms of Disease Laboratory. She previously obtained a MSc in molecular biology at the Université de Montréal where she used omics tools to characterize pediatric neurodevelopmental disorders in patient-derived cell models. She now leverages both bioinformatics and molecular biology to study the development of breast cancer, with a focus on Nanopore sequencing technologies.\n\n\nYvonne He (St John’s) (she/her)\n\n\nPhD Candidate  Memorial University of Newfoundland  St. John’s, NL, Canada\n\nYvonne He is a PhD candidate in the Department of Biology at Memorial University, where her research focuses on microbial genomics, specifically the evolution and applications of gene transfer agents. She is experienced in managing the entire genomic workflow, from the library prep to NGS data analyses.\n\n\nPaniz Taghipour (St John’s) (she/her)\n\n\nMSc Student  Memorial University of Newfoundland  St. John’s, NL, Canada\n\nPaniz Taghipour is an MSc student in Bioinformatics at Memorial University of Newfoundland. Her research focuses on machine learning approaches for microbiome data analysis, including the evaluation of different data representations and classification methods for microbiome-based sample classification."
+  },
+  {
+    "objectID": "faculty.html#facilitators",
+    "href": "faculty.html#facilitators",
+    "title": "Meet Your Faculty",
+    "section": "Facilitators",
+    "text": "Facilitators\n\nCanelle Schuhler-Husson (Montréal)\n\n\nRegional Coordinator, CBH Québec Canadian Bioinformatics Hub, Université de Montréal Montréal, Québec, Canada\n— quebec@bioinformatics.ca\n\nCanelle joined the Canadian Bioinformatics Hub team in 2025 as the Regional Coordinator for the province of Quebec. An engineer by training, she graduated in 2024 with a dual degree: a general engineering diploma from ECAM LaSalle in Lyon, France, and a master’s degree in Health Technology Engineering from the École de Technologie Supérieure (ÉTS) in Montreal. This multidisciplinary background has enabled her to develop expertise in health technologies, project management, and digital innovation applied to biomedical sciences.\nPassionate about collaborative environments and committed to advancing life sciences and digital technologies, she now applies her skills in project management, communication, and logistics to the Canadian Bioinformatics Hub, with the goal of actively contributing to its regional and national reach.\n\n\nBen Fisher (St. John’s) (he/him)\n\n\nRegional Coordinator, CBH Atlantic Canadian Bioinformatics Hub, Dalhousie University Halifax, NS, Canada\n— atlantic@bioinformatics.ca\n\nBen has a Master of Science degree in Microbiology and Immunology, completing his bioinformatics training under Dr. Morgan Langille at Dalhousie University. Throughout his training, he has instructed others in genetics, molecular biology, and microbiome data science. Ben is passionate about continued education of trainees and professionals, and firmly believes that enhancing bioinformatics and computational biology competencies will support the success of Canada’s current and future scientists."
+  },
+  {
+    "objectID": "faculty.html#systems-administrator",
+    "href": "faculty.html#systems-administrator",
+    "title": "Meet Your Faculty",
+    "section": "Systems Administrator",
+    "text": "Systems Administrator\n\nDr. Ross Dickson (he/him)\n\n\nSenior Digital Research Consultant ACENET Halifax, NS, Canada\n— ross.dickson@ace-net.ca\n\nBased at Dalhousie University, Ross joined ACENET in 2007 as a Research Consultant. With both academic research and industry software development experience, his responsibilities span education, documentation, and client support. As a senior consultant, Ross has worked with clients in almost every discipline – chemistry, physics, biology, oceanography, neuroscience, engineering, philosophy, and management studies, just to name a few.",
+    "crumbs": [
+      "Home",
+      "Meet Your Faculty"
+    ]
+  },
+  {
+    "objectID": "faculty.html#facilitator",
+    "href": "faculty.html#facilitator",
+    "title": "Meet Your Faculty",
+    "section": "Facilitator",
+    "text": "Facilitator\n\nBen Fisher (he/him)\n\n\nRegional Coordinator, CBH Atlantic Canadian Bioinformatics Hub, Dalhousie University Halifax, NS, Canada\n— atlantic@bioinformatics.ca\n\nBen has a Master of Science degree in Microbiology and Immunology, completing his bioinformatics training under Dr. Morgan Langille at Dalhousie University. Throughout his training, he has instructed others in genetics, molecular biology, and microbiome data science. Ben is passionate about continued education of trainees and professionals, and firmly believes that enhancing bioinformatics and computational biology competencies will support the success of Canada’s current and future scientists.",
+    "crumbs": [
+      "Home",
+      "Meet Your Faculty"
+    ]
+  },
+  {
+    "objectID": "faculty.html#dr.-gustavo-sganzerla-martinez-hehim",
+    "href": "faculty.html#dr.-gustavo-sganzerla-martinez-hehim",
+    "title": "Meet Your Faculty",
+    "section": "Dr. Gustavo Sganzerla Martinez (he/him)",
+    "text": "Dr. Gustavo Sganzerla Martinez (he/him)\n\n\nPostdoctoral Fellow Dalhousie University Halifax, Nova Scotia, Canada\n— gustavo.sganzerla@dal.ca\n\nGustavo works at the very intersection between computer science and biology. His main research interests involve the development of Artificial Intelligence frameworks for gathering insights in data from biological nature such as gene regulation in microorganisms (bacteria and archaea) and viruses. Having learned biology from biologists, Gustavo sees teaching computational methods as a way of giving back to the scientific community that shaped his interdisciplinary perspective. As as native software engineer, Gustavo is interested in making complex research methodologies easily accessible to those not familiar with the functioning of computers.",
+    "crumbs": [
+      "Meet Your Faculty"
+    ]
+  },
+  {
+    "objectID": "faculty.html#dr.-zahra-sadeghi-sheher",
+    "href": "faculty.html#dr.-zahra-sadeghi-sheher",
+    "title": "Meet Your Faculty",
+    "section": "Dr. Zahra Sadeghi (she/her)",
+    "text": "Dr. Zahra Sadeghi (she/her)\n\n\nResearch Scientist Dalhousie University Halifax, Nova Scotia, Canada\n— zahra.sadeghi@dal.ca\n\nDr. Zahra Sadeghi is a Machine Learning Research Scientist at Dalhousie University and has professional experience in AI and Machine Learning. With a PhD in AI and years of professional experience spanning both academia and industry, complemented by a strong track record of publications and research leadership, she has extensive expertise in advanced AI techniques and their application across a range of domains, including Computer VIsion, Natural Language Processing, Cognitive Science, and Climate modeling.",
+    "crumbs": [
+      "Meet Your Faculty"
+    ]
+  },
+  {
+    "objectID": "faculty.html#mackenzie-tapp-shethey",
+    "href": "faculty.html#mackenzie-tapp-shethey",
+    "title": "Meet Your Faculty",
+    "section": "Mackenzie Tapp (she/they)",
+    "text": "Mackenzie Tapp (she/they)\n\n\nGraduate Student Dalhousie University Halifax, Nova Scotia, Canada\n— mc295857@dal.ca\n\nMackenzie Tapp recently graduated from Dalhousie University with an Honours Co-Op Bachelor of Computer Science, with a minor in statistics and a certificate in intelligent systems. Throughout her undergraduate degree, she has participated in research involving computer vision, natural language processing, and speech diarization. She has recently begun a Masters of Applied Science in Biomedical Engineering at Dalhousie University, where she will be investigating applications of machine learning algorithms in neuroscience.",
+    "crumbs": [
+      "Meet Your Faculty"
+    ]
+  },
+  {
+    "objectID": "faculty.html#dmytro-tymoshenko-hehim",
+    "href": "faculty.html#dmytro-tymoshenko-hehim",
+    "title": "Meet Your Faculty",
+    "section": "Dmytro Tymoshenko (he/him)",
+    "text": "Dmytro Tymoshenko (he/him)\n\n\nPhD Candidate Dalhousie University Halifax, Nova Scotia, Canada\n— dy970485@dal.ca\n\nDmytro works at the intersection of genomics and machine learning, using deep learning models to study complex symbiotic relationships between microbial and eukaryotic organisms, and between eukaryotes themselves. His bioinformatics background spans undergraduate and graduate training, including research applying computer vision and feature selection to biological data, and industry experience developing data-efficient neural network models to optimize treatment response in personalized cancer therapy. He is drawn to questions difficult to formalize computationally and is passionate about pushing the frontier of what machine learning can answer in biology.",
+    "crumbs": [
+      "Meet Your Faculty"
+    ]
+  },
+  {
+    "objectID": "faculty.html#ben-fisher-hehim",
+    "href": "faculty.html#ben-fisher-hehim",
+    "title": "Meet Your Faculty",
+    "section": "Ben Fisher (he/him)",
+    "text": "Ben Fisher (he/him)\n\n\nRegional Coordinator, CBH Atlantic Canadian Bioinformatics Hub, Dalhousie University Halifax, NS, Canada\n— atlantic@bioinformatics.ca\n\nBen has a Master of Science degree in Microbiology and Immunology, completing his bioinformatics training under Dr. Morgan Langille at Dalhousie University. Throughout his training, he has instructed others in genetics, molecular biology, and microbiome data science. Ben is passionate about continued education of trainees and professionals, and firmly believes that enhancing bioinformatics and computational biology competencies will support the success of Canada’s current and future scientists.",
+    "crumbs": [
+      "Meet Your Faculty"
+    ]
+  },
+  {
+    "objectID": "faculty.html#dr.-ross-dickson-hehim",
+    "href": "faculty.html#dr.-ross-dickson-hehim",
+    "title": "Meet Your Faculty",
+    "section": "Dr. Ross Dickson (he/him)",
+    "text": "Dr. Ross Dickson (he/him)\n\n\nSenior Digital Research Consultant ACENET Halifax, NS, Canada\n— ross.dickson@ace-net.ca\n\nBased at Dalhousie University, Ross joined ACENET in 2007 as a Research Consultant. With both academic research and industry software development experience, his responsibilities span education, documentation, and client support. As a senior consultant, Ross has worked with clients in almost every discipline – chemistry, physics, biology, oceanography, neuroscience, engineering, philosophy, and management studies, just to name a few.",
+    "crumbs": [
+      "Meet Your Faculty"
+    ]
+  },
+  {
+    "objectID": "module-1.html",
+    "href": "module-1.html",
+    "title": "Module 1: Introduction to Machine Learning",
+    "section": "",
+    "text": "Instructor: Gustavo Sganzerla Martinez",
+    "crumbs": [
+      "Module 1: Introduction to Machine Learning"
+    ]
+  },
+  {
+    "objectID": "module-1.html#heading-2",
+    "href": "module-1.html#heading-2",
+    "title": "Module 1: Introduction to Machine Learning",
+    "section": "Heading 2",
+    "text": "Heading 2\nMore text.",
+    "crumbs": [
+      "Module 1: Introduction to Machine Learning"
+    ]
+  },
+  {
+    "objectID": "module-2.html",
+    "href": "module-2.html",
+    "title": "Module 2: [Supervised Learning] Classification using tree-based algorithms",
+    "section": "",
+    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 2: [Supervised Learning] Classification using tree-based algorithms"
+    ]
+  },
+  {
+    "objectID": "module-2.html#heading-2",
+    "href": "module-2.html#heading-2",
+    "title": "Module 2: [Supervised Learning] Classification using tree-based algorithms",
+    "section": "Heading 2",
+    "text": "Heading 2\nMore text.",
+    "crumbs": [
+      "Module 2: [Supervised Learning] Classification using tree-based algorithms"
+    ]
+  },
+  {
+    "objectID": "module-1.html#heading-1",
+    "href": "module-1.html#heading-1",
+    "title": "Module 1: Introduction to Machine Learning",
+    "section": "Heading 1",
+    "text": "Heading 1\nMore text.\n\nimport pandas as pd",
+    "crumbs": [
+      "Module 1: Introduction to Machine Learning"
+    ]
+  },
+  {
+    "objectID": "module-1.html#heading",
+    "href": "module-1.html#heading",
+    "title": "Module 1: Introduction to Machine Learning",
+    "section": "Heading",
+    "text": "Heading\nMore text.\n\n# comment here\nimport pandas as pd\n\n\n# Example figure rendering\n# from https://positron.posit.co/tutorial-get-started-ipynb.html\n\nfrom plotnine.data import mpg\nmpg_2008 = mpg[mpg['year'] == 2008]\nfrom plotnine import *\n\n(ggplot(mpg_2008, aes(x='displ', y='hwy'))\n + geom_jitter(aes(color='class'))\n + geom_smooth(method='lm', se=False)\n    + labs(title='MPG: Displacement vs Highway Mileage',\n            x='Displacement (liters)',\n            y='Highway Mileage (mpg)'))",
+    "crumbs": [
+      "Module 1: Introduction to Machine Learning"
+    ]
+  },
+  {
+    "objectID": "module-2.html#heading",
+    "href": "module-2.html#heading",
+    "title": "Module 2: [Supervised Learning] Classification using tree-based algorithms",
+    "section": "Heading",
+    "text": "Heading\nMore text.",
+    "crumbs": [
+      "Module 2: [Supervised Learning] Classification using tree-based algorithms"
+    ]
+  },
+  {
+    "objectID": "module-4.html",
+    "href": "module-4.html",
+    "title": "Module 4: [Supervised Learning] Model Interpretability (“opening the black box”)",
+    "section": "",
+    "text": "Instructor: Dmytro Tymoshenko\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 4: [Supervised Learning] Model Interpretability (“opening the black box”)"
+    ]
+  },
+  {
+    "objectID": "module-5.html",
+    "href": "module-5.html",
+    "title": "Module 5: [Supervised Learning] Regression using Artificial Neural Networks",
+    "section": "",
+    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 5: [Supervised Learning] Regression using Artificial Neural Networks"
+    ]
+  },
+  {
+    "objectID": "module-6.html",
+    "href": "module-6.html",
+    "title": "Module 6: [Unsupervised Learning] Clustering",
+    "section": "",
+    "text": "Instructor: Mackenzie Tapp\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 6: [Unsupervised Learning] Clustering"
+    ]
+  },
+  {
+    "objectID": "module-7.html",
+    "href": "module-7.html",
+    "title": "Module 7: Conclusions",
+    "section": "",
+    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 7: Conclusions"
+    ]
+  },
+  {
+    "objectID": "index.html#class-photo",
+    "href": "index.html#class-photo",
+    "title": "Machine Learning Foundations: Halifax, NS",
+    "section": "Class Photo",
+    "text": "Class Photo",
+    "crumbs": [
+      "Workshop Info"
+    ]
+  },
+  {
+    "objectID": "module-3.html",
+    "href": "module-3.html",
+    "title": "Module 3: Classification using Artificial Neural Networks",
+    "section": "",
+    "text": "Instructor: Zahra Sadeghi\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 3: Classification using Artificial Neural Networks"
+    ]
+  }
+]

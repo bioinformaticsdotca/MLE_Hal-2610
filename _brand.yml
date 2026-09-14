@@ -1,0 +1,16 @@
+color:
+  palette:
+    cbw-purple: "#683673"
+    off-white: "#FAFAFA"
+    dark-grey: "#364149"
+    black: "#000000"
+  background: "#FFFFFF"
+  foreground: dark-grey
+  primary: dark-grey
+
+typography:
+  fonts:
+    - family: Roboto
+      source: google
+  base: Roboto
+  headings: Roboto

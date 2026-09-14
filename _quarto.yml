@@ -1,0 +1,52 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Machine Learning Foundations: Halifax, NS"
+  favicon: "favicon.ico"
+  sidebar:
+    logo: ./img/CBW-MLE.png
+    href: index.qmd
+    style: "floating"
+    collapse-level: 1
+    contents:
+      - section: "<h3>I: Introduction"
+      - text: "Workshop Info"
+        href: index.qmd
+      - text: "Meet Your Faculty"
+        href: faculty.qmd
+      - section: "<h3>II: Modules"
+      - module-1.ipynb
+      - module-2.ipynb
+      - module-3.ipynb
+      - module-4.ipynb
+      - module-5.ipynb
+      - module-6.ipynb
+      - module-7.ipynb
+      - text: "<br>"
+      - section: "<h4>Sponsors"
+      - text: '<a href="https://www.cihr-irsc.gc.ca"><img src="img/sponsors/cihr.png" width=90% alt="Canadian Institutes of Health Research logo."></a>'
+      - text: '<a href="https://oicr.on.ca/"><img src="img/sponsors/oicr.png" width=40% style="padding-bottom: 20px" alt="Ontario Institute for Cancer Research logo.">'
+      - text: '<a href="https://genomecanada.ca/"><img src="img/sponsors/genomecanada.png" width=75% style="padding-bottom: 20px" alt="Genome Canada logo.">'
+      - text: '<a href="https://www.ontariogenomics.ca/"><img src="img/sponsors/ontariogenomics.png" width=75% style="padding-bottom: 20px;" alt="Ontario Genomics logo.">'
+      - text: '<a href="https://www.dal.ca/"><img src="img/sponsors/dal.png" width=90% alt="Dalhousie University logo.">'
+      - text: '<a href="https://www.ace-net.ca/"><img src="img/sponsors/acenet-logo.png" width=90% alt="ACENET logo.">'
+
+
+
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+    toc-location: right
+
+
+
+
+
+
