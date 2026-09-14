@@ -1,35 +1,5 @@
 [
   {
-    "objectID": "index.html#pre-work",
-    "href": "index.html#pre-work",
-    "title": "Machine Learning Foundations: Halifax, NS",
-    "section": "Pre-work",
-    "text": "Pre-work\nYou can find your pre-work here.",
-    "crumbs": [
-      "Workshop Info"
-    ]
-  },
-  {
-    "objectID": "index.html#class-photo",
-    "href": "index.html#class-photo",
-    "title": "Machine Learning Foundations: Halifax, NS",
-    "section": "Class Photo",
-    "text": "Class Photo\nComing soon!",
-    "crumbs": [
-      "Workshop Info"
-    ]
-  },
-  {
-    "objectID": "index.html#schedule",
-    "href": "index.html#schedule",
-    "title": "Machine Learning Foundations: Halifax, NS",
-    "section": "Schedule",
-    "text": "Schedule",
-    "crumbs": [
-      "Workshop Info"
-    ]
-  },
-  {
     "objectID": "module-7.html",
     "href": "module-7.html",
     "title": "Module 7: Conclusions",
@@ -78,13 +48,6 @@
     "crumbs": [
       "Module 1: Introduction to Machine Learning"
     ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   },
   {
     "objectID": "faculty.html#dr.-gustavo-sganzerla-martinez-hehim",
@@ -144,6 +107,53 @@
     "text": "Dr. Ross Dickson (he/him)\n\n\nSenior Digital Research Consultant ACENET Halifax, NS, Canada\n— ross.dickson@ace-net.ca\n\nBased at Dalhousie University, Ross joined ACENET in 2007 as a Research Consultant. With both academic research and industry software development experience, his responsibilities span education, documentation, and client support. As a senior consultant, Ross has worked with clients in almost every discipline – chemistry, physics, biology, oceanography, neuroscience, engineering, philosophy, and management studies, just to name a few.",
     "crumbs": [
       "Meet Your Faculty"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Machine Learning Foundations: Halifax, NS",
+    "section": "",
+    "text": "Instructors: Gustavo Sganzerla Martinez, Zahra Sadeghi, Dmytro Tymoshenko, Mackenzie Tapp",
+    "crumbs": [
+      "Workshop Info"
+    ]
+  },
+  {
+    "objectID": "index.html#pre-work",
+    "href": "index.html#pre-work",
+    "title": "Machine Learning Foundations: Halifax, NS",
+    "section": "Pre-work",
+    "text": "Pre-work\nYou can find your pre-work here.",
+    "crumbs": [
+      "Workshop Info"
+    ]
+  },
+  {
+    "objectID": "index.html#class-photo",
+    "href": "index.html#class-photo",
+    "title": "Machine Learning Foundations: Halifax, NS",
+    "section": "Class Photo",
+    "text": "Class Photo\nComing soon!",
+    "crumbs": [
+      "Workshop Info"
+    ]
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Machine Learning Foundations: Halifax, NS",
+    "section": "Schedule",
+    "text": "Schedule",
+    "crumbs": [
+      "Workshop Info"
     ]
   },
   {

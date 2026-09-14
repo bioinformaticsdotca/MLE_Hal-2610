@@ -2,6 +2,8 @@
 title: "Machine Learning Foundations: Halifax, NS"
 ---
 
+<i>Instructors: Gustavo Sganzerla Martinez, Zahra Sadeghi, Dmytro Tymoshenko, Mackenzie Tapp </i>
+
 # Workshop Info
 
 Welcome to the (2026) Machine Learning Foundations Halifax NS Canadian Bioinformatics Workshop webpage!  
