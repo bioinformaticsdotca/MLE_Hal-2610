@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - slides/*.pdf
 
 website:
   title: "Machine Learning Foundations: Halifax, NS"
