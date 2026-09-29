@@ -1,5 +1,45 @@
 [
   {
+    "objectID": "module-7.html",
+    "href": "module-7.html",
+    "title": "Module 7: Conclusions",
+    "section": "",
+    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 7: Conclusions"
+    ]
+  },
+  {
+    "objectID": "module-5.html",
+    "href": "module-5.html",
+    "title": "Module 5: Regression using Artificial Neural Networks",
+    "section": "",
+    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 5: Regression using Artificial Neural Networks"
+    ]
+  },
+  {
+    "objectID": "module-3.html",
+    "href": "module-3.html",
+    "title": "Module 3: Classification using Artificial Neural Networks",
+    "section": "",
+    "text": "Instructor: Zahra Sadeghi\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 3: Classification using Artificial Neural Networks"
+    ]
+  },
+  {
+    "objectID": "module-1.html",
+    "href": "module-1.html",
+    "title": "Module 1: Introduction to Machine Learning",
+    "section": "",
+    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture",
+    "crumbs": [
+      "Module 1: Introduction to Machine Learning"
+    ]
+  },
+  {
     "objectID": "faculty.html#dr.-gustavo-sganzerla-martinez-hehim",
     "href": "faculty.html#dr.-gustavo-sganzerla-martinez-hehim",
     "title": "Meet Your Faculty",
@@ -60,74 +100,11 @@
     ]
   },
   {
-    "objectID": "module-4.html",
-    "href": "module-4.html",
-    "title": "Module 4: Model Interpretability (“opening the black box”)",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Instructor: Dmytro Tymoshenko\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
-    "crumbs": [
-      "Module 4: Model Interpretability (“opening the black box”)"
-    ]
-  },
-  {
-    "objectID": "module-6.html",
-    "href": "module-6.html",
-    "title": "Module 6: Clustering",
-    "section": "",
-    "text": "Instructor: Mackenzie Tapp\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
-    "crumbs": [
-      "Module 6: Clustering"
-    ]
-  },
-  {
-    "objectID": "module-7.html",
-    "href": "module-7.html",
-    "title": "Module 7: Conclusions",
-    "section": "",
-    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
-    "crumbs": [
-      "Module 7: Conclusions"
-    ]
-  },
-  {
-    "objectID": "module-1.html",
-    "href": "module-1.html",
-    "title": "Module 1: Introduction to Machine Learning",
-    "section": "",
-    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture",
-    "crumbs": [
-      "Module 1: Introduction to Machine Learning"
-    ]
-  },
-  {
-    "objectID": "module-3.html",
-    "href": "module-3.html",
-    "title": "Module 3: Classification using Artificial Neural Networks",
-    "section": "",
-    "text": "Instructor: Zahra Sadeghi\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
-    "crumbs": [
-      "Module 3: Classification using Artificial Neural Networks"
-    ]
-  },
-  {
-    "objectID": "module-5.html",
-    "href": "module-5.html",
-    "title": "Module 5: Regression using Artificial Neural Networks",
-    "section": "",
-    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
-    "crumbs": [
-      "Module 5: Regression using Artificial Neural Networks"
-    ]
-  },
-  {
-    "objectID": "module-2.html",
-    "href": "module-2.html",
-    "title": "Module 2: Classification using tree-based algorithms",
-    "section": "",
-    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
-    "crumbs": [
-      "Module 2: Classification using tree-based algorithms"
-    ]
+    "text": "About this site"
   },
   {
     "objectID": "index.html",
@@ -170,10 +147,33 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "module-2.html",
+    "href": "module-2.html",
+    "title": "Module 2: Classification using tree-based algorithms",
     "section": "",
-    "text": "About this site"
+    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 2: Classification using tree-based algorithms"
+    ]
+  },
+  {
+    "objectID": "module-4.html",
+    "href": "module-4.html",
+    "title": "Module 4: Model Interpretability (“opening the black box”)",
+    "section": "",
+    "text": "Instructor: Dmytro Tymoshenko\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 4: Model Interpretability (“opening the black box”)"
+    ]
+  },
+  {
+    "objectID": "module-6.html",
+    "href": "module-6.html",
+    "title": "Module 6: Clustering",
+    "section": "",
+    "text": "Instructor: Mackenzie Tapp\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 6: Clustering"
+    ]
   }
 ]
