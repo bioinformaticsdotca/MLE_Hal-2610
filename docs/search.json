@@ -1,45 +1,5 @@
 [
   {
-    "objectID": "module-7.html",
-    "href": "module-7.html",
-    "title": "Module 7: Conclusions",
-    "section": "",
-    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
-    "crumbs": [
-      "Module 7: Conclusions"
-    ]
-  },
-  {
-    "objectID": "module-5.html",
-    "href": "module-5.html",
-    "title": "Module 5: Regression using Artificial Neural Networks",
-    "section": "",
-    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
-    "crumbs": [
-      "Module 5: Regression using Artificial Neural Networks"
-    ]
-  },
-  {
-    "objectID": "module-3.html",
-    "href": "module-3.html",
-    "title": "Module 3: Classification using Artificial Neural Networks",
-    "section": "",
-    "text": "Instructor: Zahra Sadeghi\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
-    "crumbs": [
-      "Module 3: Classification using Artificial Neural Networks"
-    ]
-  },
-  {
-    "objectID": "module-1.html",
-    "href": "module-1.html",
-    "title": "Module 1: Introduction to Machine Learning",
-    "section": "",
-    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture",
-    "crumbs": [
-      "Module 1: Introduction to Machine Learning"
-    ]
-  },
-  {
     "objectID": "faculty.html#dr.-gustavo-sganzerla-martinez-hehim",
     "href": "faculty.html#dr.-gustavo-sganzerla-martinez-hehim",
     "title": "Meet Your Faculty",
@@ -100,11 +60,74 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "module-4.html",
+    "href": "module-4.html",
+    "title": "Module 4: Model Interpretability (“opening the black box”)",
     "section": "",
-    "text": "About this site"
+    "text": "Instructor: Dmytro Tymoshenko\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 4: Model Interpretability (“opening the black box”)"
+    ]
+  },
+  {
+    "objectID": "module-6.html",
+    "href": "module-6.html",
+    "title": "Module 6: Clustering",
+    "section": "",
+    "text": "Instructor: Mackenzie Tapp\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 6: Clustering"
+    ]
+  },
+  {
+    "objectID": "module-7.html",
+    "href": "module-7.html",
+    "title": "Module 7: Conclusions",
+    "section": "",
+    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 7: Conclusions"
+    ]
+  },
+  {
+    "objectID": "module-1.html",
+    "href": "module-1.html",
+    "title": "Module 1: Introduction to Machine Learning",
+    "section": "",
+    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture",
+    "crumbs": [
+      "Module 1: Introduction to Machine Learning"
+    ]
+  },
+  {
+    "objectID": "module-3.html",
+    "href": "module-3.html",
+    "title": "Module 3: Classification using Artificial Neural Networks",
+    "section": "",
+    "text": "Instructor: Zahra Sadeghi\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 3: Classification using Artificial Neural Networks"
+    ]
+  },
+  {
+    "objectID": "module-5.html",
+    "href": "module-5.html",
+    "title": "Module 5: Regression using Artificial Neural Networks",
+    "section": "",
+    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLab\n\n## Imports\nfrom sklearn.datasets import load_diabetes\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score\nfrom scipy.stats import pearsonr\nfrom sklearn.preprocessing import StandardScaler\nimport tensorflow as tf\nfrom tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import Dense, Dropout\nfrom tensorflow.keras.callbacks import EarlyStopping\n\nWe will use the pre-loaded diabetes dataset, available in sklearn.datasets. Additional information from this dataset can be found at https://scikit-learn.org/stable/datasets/toy_dataset.html (9.1.2)\n\ndiabetes = load_diabetes()\n\n###lets inspect it\ndiabetes.feature_names\n\n###lets create a dataframe to structure the dataset for better vis\n\ndf = pd.DataFrame(diabetes.data, columns=diabetes.feature_names)\n\nIn total, there are 442 observations (rows) and 10 features (columns)\nIn addition to the features age, sex, bmi (body-mass index), and bp (average blood pressure), we have the following:\ns1 = total serum cholesterol\ns2 = low-density lipoproteins (ldl, bad cholesterol)\ns3 = high-density lipoproteins (hdl, good cholesterol)\ns4 = total cholesteral ratio\ns5 = log of serum triglycerides\ns6 = blood glucose level (target)\n\n###now lets only visualize one feature\n###we use only one representative feature (bmi) \n###lets try to predict the target (s6; blood glucose level) with it\n\nX = diabetes.data[:, np.newaxis, 2]\ny = diabetes.target\n\n\nplt.figure(figsize=(6,5))\nplt.scatter(X, y, alpha=0.7)\n\nplt.xlabel(\"BMI\")\nplt.ylabel(\"blood glucose level\")\n\nplt.show()\n\n###note that the points are scattered\n###how would you summarize this prediction with a single prediction rule (line)?\n\n\n###we can observe the looks of a positive correlation between bmi and the target\n###we can even quantify this relationship with a simple correlation (pearson) test\nr, p = pearsonr(\n    diabetes.data[:,2],\n    diabetes.target\n)\n\nprint(r)\nprint(p)\n\n###we can assume positive correlation\n###BMI and the target are linearly associated and there is enough statistical evidence for it\n\n\n###lets add a linear regression here\n\n###train and test split\nX_train, X_test, y_train, y_test = train_test_split(\n    X,\n    y,\n    test_size=0.2,\n    random_state=42\n)\n\n###model instantiating\nmodel = LinearRegression()\n\n###model fitting\nmodel.fit(X_train, y_train)\n\n###visualization\nplt.figure(figsize=(6,5))\nplt.scatter(X_train, y_train, alpha=0.7)\nplt.plot(X_test, model.predict(X_test), color=\"red\", linewidth=3)\n\nplt.xlabel(\"BMI\")\nplt.ylabel(\"Blood glucose level\")\nplt.title(\"Linear regression\")\n\nplt.show()\n\nNow, let’s evaluate the performance of a linear regression model using BMI to predict blood glucose.\nLet’s consider the example:\n\n\n\n\nPatient\n\n\nActual\n\n\nPredicted\n\n\nError\n\n\n\n\n\n\nA\n\n\n200\n\n\n180\n\n\n-20\n\n\n\n\nB\n\n\n140\n\n\n110\n\n\n+30\n\n\n\n\nC\n\n\n115\n\n\n115\n\n\n0\n\n\n\n\nMetrics to evaluate regression performance\n\n\n\n\nMetric\n\n\nQuestion\n\n\nInterpretation\n\n\n\n\n\n\nMAE(Mean Absolute Error)\n\n\nHow wrong are we on average?\n\n\nTypical prediction error. It represents the average distance between predictions and true values.\n\n\n\n\nRMSE(Root Mean Squared Error)\n\n\nHow bad are large mistakes?\n\n\nSimilar to MAE, but gives more importance to large prediction errors.\n\n\n\n\nR²(Coefficient of Determination)\n\n\nHow much variation do we explain?\n\n\nMeasures the proportion of variability in the outcome explained by the model.\n\n\n\n\n\n###let's evaluate on the test split\n\ny_pred = model.predict(X_test)\n\nmae = mean_absolute_error(y_test, y_pred)\nrmse = np.sqrt(mean_squared_error(y_test, y_pred))\nr2 = r2_score(y_test, y_pred)\n\nprint(f\"MAE: {mae:.2f}\")\nprint(f\"RMSE: {rmse:.2f}\")\nprint(f\"R²: {r2:.2f}\")\n\n\n###instead of only using the BMI as a predictor, let's use all the data\n\n###variables\nX = diabetes.data\ny = diabetes.target\n\n##train-test split\nX_train, X_test, y_train, y_test = train_test_split(\n    X,\n    y,\n    test_size=0.2,\n    random_state=42\n)\n###model fit\nmodel.fit(X_train, y_train)\n\n###evaluate\ny_pred = model.predict(X_test)\nmae = mean_absolute_error(y_test, y_pred)\nrmse = np.sqrt(mean_squared_error(y_test, y_pred))\nr2 = r2_score(y_test, y_pred)\n\nprint(f\"MAE: {mae:.2f}\")\nprint(f\"RMSE: {rmse:.2f}\")\nprint(f\"R²: {r2:.2f}\")\n\n###lower MAE means the predictions are closer to the observed target\n###lower RMSE means fewer larger prediction errors\n###higher r^2 means the model explains more of the variation in the outcome\n\n###adding more information improved the model, but there is still a lot of unexplained variation\n\nWe need to consider that a linear regression model assumes the relationship between the inputs and outcome can be describe using a linear combination of features.\nMost biological systems are non-linear.\nnow the question becomes: how can we improve our prediction? 1. more data 2. better features 3. a more complex model (ANNs)\n\n###data prep for the ANN\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X,\n    y,\n    test_size=0.2,\n    random_state=42\n)\n\n\n###feature scaling (very important for the ANN)\n###the coefficients were mathematically solved\n###any major differences in scale will bias the ANN\n\nscaler = StandardScaler()\n\n###scale only based on the train to avoid leakage\nX_train_scaled = scaler.fit_transform(X_train)\n\nX_test_scaled = scaler.transform(X_test)\n\nAn objet of the class Dense indicates a layer in the ANN. Dense takes: Number of neurons: 32, 16, 1\ninput_shape: Number of features considered. We second index of the X (rows, columns); always in the first layer of the ANN.\nactivation: ‘relu’, this is the activation function of each neuron. ReLu (rectified linear unit) outputs the actual value if positive, and 0 if negative. Introduces non-linearity.\nThe last Dense layer specifies a single neuron as the output.\n\n###instantiating the model\nmodel = Sequential([\n    Dense(32, activation='relu', input_shape=(X_train.shape[1],)), ###32 neurons learning the combination of inputs\n    Dense(16, activation='relu'), ###16 neurons learning the combination of inputs\n    Dense(1)\n])\n\n\n###compile the model\nmodel.compile(\n    optimizer='adam', ###how weights are updated ###adaptive moment estimation\n    loss='mse', ##what the model tries to minimize\n    metrics=['mae'] #performance\n)\n\n\n###train the model\nhistory = model.fit(\n    X_train_scaled,\n    y_train,\n    validation_split=0.2,\n    epochs=100\n)\n\n\n###this shows the ANN is learning, see the decrease in MSE after each epoch of training\n\nplt.plot(history.history[\"loss\"], label=\"Training\")\nplt.plot(history.history[\"val_loss\"], label=\"Validation\")\n\nplt.xlabel(\"Epoch\")\nplt.ylabel(\"MSE\")\n\n\n###now lets evaluate the same way we did with the linear regression\ny_pred_ann = model.predict(X_test_scaled).flatten()\n\nmae = mean_absolute_error(y_test, y_pred_ann)\nrmse = np.sqrt(mean_squared_error(y_test, y_pred_ann))\nr2 = r2_score(y_test, y_pred_ann)\n\nprint(f\"MAE: {mae:.2f}\")\nprint(f\"RMSE: {rmse:.2f}\")\nprint(f\"R²: {r2:.2f}\")\n\nIn conclusion, the ANN did not outperform a linear regression. This means the problem may not require a highly flexible model or the network might require more data and optimization\nWe should always attain to the principle of parsimony (the simpler the better)\nWe can try to adjust the ANN to see if the performance will improve, at this stage, you can toy around with the layers Dense(16, activation=‘relu’) to either a simpler (less layers, less neurons) or a more complex (more layers, more neurons)\nWe can also adjust the training time (epochs) epochs = 100\nFor each test, we should plot the loss (train and val) and also evaluate the ANN on the test data",
+    "crumbs": [
+      "Module 5: Regression using Artificial Neural Networks"
+    ]
+  },
+  {
+    "objectID": "module-2.html",
+    "href": "module-2.html",
+    "title": "Module 2: Classification using tree-based algorithms",
+    "section": "",
+    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "crumbs": [
+      "Module 2: Classification using tree-based algorithms"
+    ]
   },
   {
     "objectID": "index.html",
@@ -147,33 +170,10 @@
     ]
   },
   {
-    "objectID": "module-2.html",
-    "href": "module-2.html",
-    "title": "Module 2: Classification using tree-based algorithms",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Instructor: Gustavo Sganzerla Martinez\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
-    "crumbs": [
-      "Module 2: Classification using tree-based algorithms"
-    ]
-  },
-  {
-    "objectID": "module-4.html",
-    "href": "module-4.html",
-    "title": "Module 4: Model Interpretability (“opening the black box”)",
-    "section": "",
-    "text": "Instructor: Dmytro Tymoshenko\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
-    "crumbs": [
-      "Module 4: Model Interpretability (“opening the black box”)"
-    ]
-  },
-  {
-    "objectID": "module-6.html",
-    "href": "module-6.html",
-    "title": "Module 6: Clustering",
-    "section": "",
-    "text": "Instructor: Mackenzie Tapp\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
-    "crumbs": [
-      "Module 6: Clustering"
-    ]
+    "text": "About this site"
   }
 ]
