@@ -171,7 +171,7 @@
     "href": "module-6.html",
     "title": "Module 6: Clustering",
     "section": "",
-    "text": "Instructor: Mackenzie Tapp\n\nLecture\n\n\n\n\nLab\n\n# Code Block",
+    "text": "Instructor: Mackenzie Tapp\n\nLecture\n\n\n\n\n\n\nLab\n\nfrom sklearn.cluster import KMeans\nimport numpy as np\nfrom matplotlib import pyplot as plt\nimport pandas as pd\nfrom sklearn.preprocessing import StandardScaler\n\n# Load the CSV file into a DataFrame\ndf = pd.read_csv('kaggle_dta.csv')\n\n# View the first 5 rows of data\nx = np.array(df['x'])\ny = np.array(df['y'])\n\nscaler = StandardScaler()\n\n\n\n\n# 2. Flatten and stack into (N, 2) shape\ncoordinates = np.c_[x.ravel(), y.ravel()]\ncoordinates = scaler.fit_transform(coordinates)\n\nkmeans = KMeans(n_clusters=3, random_state=0, n_init=\"auto\").fit(coordinates)",
     "crumbs": [
       "Module 6: Clustering"
     ]
