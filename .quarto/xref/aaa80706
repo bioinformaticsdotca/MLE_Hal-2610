@@ -1,1 +1,1 @@
-{"entries":[],"headings":["lecture","lab"]}
+{"entries":[],"headings":["lecture","lab","example-1","create-the-dataset","visualize-the-data","define-a-baseline-mlp","create-a-pipeline","grid-search","example-2","generate-the-dataset","visualize-the-original-data","train-mlp-with-different-learning-rates","visualize-training-loss","visualize-decision-boundaries","example-3","full-batch-gradient-descent","stochastic-gradient-descent","mini-batch-gradient-descent","compare-the-loss-curves","example-4","create-artificial-moon-data"]}
