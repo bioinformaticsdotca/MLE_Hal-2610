@@ -1,1 +1,1 @@
-{"entries":[],"headings":["lecture","lab"]}
+{"entries":[],"headings":["lecture","opening-the-black-box","complexity-vs-explainability","model-specific-vs-model-agnostic-approaches","helper-functions","data-nhanes-i-dataset","data-preparation","linear-logistic-regression","coefficients-build-in","decision-tree-based-models","feature-importances-built-in","estimators_-with-export_text","ann-mlp-classifier","permutation-importance","shap-shapley-additive-explanations","shap-tree-explainer","shap-kernelpermutation-explainers","shap-built-in-graphs","shap-local-explanations"]}
