@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Session Title: Artificial Netural Networks for classification – Machine Learning Foundations: Halifax, NS</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./favicon.ico" rel="icon">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-05b14116538ce6f77ee146ea0a2ccc49.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c6c736898a872613c634d7e03573df5d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-05b14116538ce6f77ee146ea0a2ccc49.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Session Title: Artificial Netural Networks for classification</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="././img/CBW-MLE.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="././img/CBW-MLE.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text"><h3>I: Introduction
+  </h3></span></span></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workshop Info</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./faculty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Meet Your Faculty</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text"><h3>II: Modules
+  </h3></span></span></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 1: Introduction to Machine Learning</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 2: Classification using tree-based algorithms</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 3: Classification using Artificial Neural Networks</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 4: [Supervised Learning] Model Interpretability (“opening the black box”)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 5: Regression using Artificial Neural Networks</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 6: Clustering</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 7: Conclusions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+ <span class="menu-text"><br></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text"><h4>Sponsors
+  </h4></span></span></li>
+        <li class="sidebar-item">
+ <span class="menu-text"><a href="https://www.cihr-irsc.gc.ca"><img src="img/sponsors/cihr.png" width="90%" alt="Canadian Institutes of Health Research logo."></a></span>
+  </li>
+        <li class="sidebar-item">
+ <span class="menu-text"><a href="https://oicr.on.ca/"><img src="img/sponsors/oicr.png" width="40%" style="padding-bottom: 20px" alt="Ontario Institute for Cancer Research logo."></a></span><a href="https://oicr.on.ca/">
+  </a></li><a href="https://oicr.on.ca/">
+        </a><li class="sidebar-item"><a href="https://oicr.on.ca/">
+ <span class="menu-text"></span></a><a href="https://genomecanada.ca/"><img src="img/sponsors/genomecanada.png" width="75%" style="padding-bottom: 20px" alt="Genome Canada logo.">
+  </a></li><a href="https://genomecanada.ca/">
+        </a><li class="sidebar-item"><a href="https://genomecanada.ca/">
+ <span class="menu-text"></span></a><a href="https://www.ontariogenomics.ca/"><img src="img/sponsors/ontariogenomics.png" width="75%" style="padding-bottom: 20px;" alt="Ontario Genomics logo.">
+  </a></li><a href="https://www.ontariogenomics.ca/">
+        </a><li class="sidebar-item"><a href="https://www.ontariogenomics.ca/">
+ <span class="menu-text"></span></a><a href="https://www.dal.ca/"><img src="img/sponsors/dal.png" width="90%" alt="Dalhousie University logo.">
+  </a></li><a href="https://www.dal.ca/">
+        </a><li class="sidebar-item"><a href="https://www.dal.ca/">
+ <span class="menu-text"></span></a><a href="https://www.ace-net.ca/"><img src="img/sponsors/acenet-logo.png" width="90%" alt="ACENET logo.">
+  </a></li><a href="https://www.ace-net.ca/">
+    </a></ul><a href="https://www.ace-net.ca/">
+    </a></div><a href="https://www.ace-net.ca/">
+</a></nav><a href="https://www.ace-net.ca/">
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+</a><main class="content" id="quarto-document-content"><a href="https://www.ace-net.ca/">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Session Title: Artificial Netural Networks for classification</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Instructor:</strong> Zahra Sadeghi</p>
+</a><div id="cell-2" class="cell"><a href="https://www.ace-net.ca/">
+</a><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><a href="https://www.ace-net.ca/"></a><pre class="sourceCode python code-with-copy"><a href="https://www.ace-net.ca/"><code class="sourceCode python"><span id="cb1-1"></span></code></a><code class="sourceCode python"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> make_moons</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> (</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    train_test_split,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    StratifiedKFold,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    cross_val_score</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.neural_network <span class="im">import</span> MLPClassifier</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> classification_report, confusion_matrix, f1_score</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Generate and visualize the data</p>
+<p><strong>Create the dataset</strong></p>
+<div id="cell-6" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> make_moons(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    n_samples<span class="op">=</span><span class="dv">500</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    noise<span class="op">=</span><span class="fl">0.2</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">42</span> <span class="co"># controls the randomness, allowing you to reproduce experiments and obtain consistent results when you run the same code under the same conditions.</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-7" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bb2aa7be-cb91-4d1f-e3be-e171d941a648">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X[:<span class="dv">10</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[ 0.83085779 -0.33434228]
+ [ 0.99170955  0.87899966]
+ [ 1.1072453  -0.47034376]
+ [-0.14089918  1.03314844]
+ [ 0.40559217  1.32852876]
+ [ 1.28895069 -0.52407983]
+ [ 1.12079473 -0.27225413]
+ [ 0.10659373  1.21210782]
+ [ 0.5201985   0.58288335]
+ [ 1.70590095 -0.33306612]]</code></pre>
+</div>
+</div>
+<div id="cell-8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="131f9685-abcd-4033-a469-ded947434ba4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y[:<span class="dv">10</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1 0 1 0 0 1 1 0 0 1]</code></pre>
+</div>
+</div>
+<p>Visualize the data — “We have a binary classification problem with two nonlinear classes. Our goal is to learn a decision boundary that separates them.”</p>
+<div id="cell-10" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:487}}" data-outputid="8bbdc152-7041-434f-bd43-c2ec52219516">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="dv">5</span>))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.scatter(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    X[:, <span class="dv">0</span>],</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    X[:, <span class="dv">1</span>],</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    c<span class="op">=</span>y,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"coolwarm"</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    edgecolor<span class="op">=</span><span class="st">"k"</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.8</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Feature 1"</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Feature 2"</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Two-Moons Classification Dataset"</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="MLE_module3_ex1_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="4" type="1">
+<li>Create the K-Fold Cross-Validation strategy: “We divide the data into five folds. In each iteration, four folds are used for training and one fold is used for validation.”</li>
+</ol>
+<div id="cell-12" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># stratification does not balance the dataset. It preserves approximately the original class proportions.</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>cv <span class="op">=</span> StratifiedKFold(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    n_splits<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    shuffle<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">42</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Define a baseline MLP</strong></p>
+<p>With solver=“sgd”, scikit-learn uses mini-batch gradient-based optimization by default. The default batch_size is “auto”, which means: min(200, n_samples)</p>
+<div id="cell-16" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mlp <span class="op">=</span> MLPClassifier(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    hidden_layer_sizes<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">10</span>),</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    activation<span class="op">=</span><span class="st">"relu"</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    solver<span class="op">=</span><span class="st">"sgd"</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.0001</span>, <span class="co"># L2 Regularization strength</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    learning_rate_init<span class="op">=</span><span class="fl">0.001</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    max_iter<span class="op">=</span><span class="dv">1000</span>,</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">42</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Create a Pipeline: “The Pipeline ensures that preprocessing and model training happen together. During K-Fold Cross-Validation, the scaler is fitted only on the training portion of each fold, preventing data leakage.”</p>
+<p>StandardScaler standardizes each input feature so that it has approximately:</p>
+<pre><code>Mean = 0
+Standard deviation = 1
+
+z=(x−μ)/σ</code></pre>
+<div id="cell-18" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> Pipeline([</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"scaler"</span>, StandardScaler()),</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"mlp"</span>, mlp)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>create the train/test split</p>
+<div id="cell-20" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    X,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    y,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    test_size<span class="op">=</span><span class="fl">0.2</span>,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    stratify<span class="op">=</span>y,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">42</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Perform 5-Fold Cross-Validation</p>
+<div id="cell-22" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="dcc1201d-6581-45dc-e87f-08f47ca628de">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>np.shape(X),np.shape(X_train),np.shape(X_test)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>((400, 2), (100, 2), (500, 2))</code></pre>
+</div>
+</div>
+<div id="cell-23" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="50b1982c-30eb-40b8-e8ce-b478b6a38929">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> cross_val_score(</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    model,</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    X_train,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    y_train,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    cv<span class="op">=</span>cv,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    scoring<span class="op">=</span><span class="st">"f1"</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"CV F1 scores:"</span>, scores)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Mean accuracy:"</span>)</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(scores.mean())</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Standard deviation:"</span>)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(scores.std())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>CV F1 scores: [0.975      0.97435897 0.98734177 0.98765432 0.97560976]
+Mean CV F1: 0.9799929647192176
+
+Mean accuracy:
+0.9799929647192176
+
+Standard deviation:
+0.006141423490399843</code></pre>
+</div>
+</div>
+<pre><code>"This MLP works reasonably well."
+
+"But are these hyperparameters optimal?"</code></pre>
+<p>Grid Search with 5-Fold CV. GridSearchCV asks: “Which combination of hyperparameters gives me the best cross-validated F1 score?”</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABKMAAAEHCAYAAAByT4VOAAAABHNCSVQICAgIfAhkiAAAABl0RVh0U29mdHdhcmUAZ25vbWUtc2NyZWVuc2hvdO8Dvz4AAAAtdEVYdENyZWF0aW9uIFRpbWUAV2VkIDE0IE9jdCAyMDI2IDA2OjUyOjA5IFBNIEFEVCkKYeMAACAASURBVHic7N1neFRFA4bh5+ymURJIIyGEKoTepPeOdERQUBRFVJrYUOy9IGAB/BTpqCAqiIAgRektoUPovSXUFNLL7p7vBzUQMASyQX3v68qPZM/uzKnZec/MHMNms5mIiIiIiIiIiIg4gSW3KyAiIiIiIiIiIv8dCqNERERERERERMRpFEaJiIiIiIiIiIjTKIwSERERERERERGnURglIiIiIiIiIiJOozBKREREREREREScRmGUiIiIiIiIiIg4jcIoERERERERERFxGoVRIiIiIiIiIiLiNAqjRERERERERETEaRRGiYiIiIiIiIiI0yiMEhERERERERERp1EYJSIiIiIiIiIiTqMwSkREREREREREnEZhlIiIiIiIiIiIOI3CKBERERERERERcRqFUSIiIiIiIiIi4jQKo0RERERERERExGkURomIiIiIiIiIiNMojBIREREREREREadRGCUiIiIiIiIiIk6jMEpERERERERERJxGYZSIiIiIiIiIiDiNwigREREREREREXGauziMsrN/ZAsKeXsT+OBUoszcro/cSenr3+JeP298ivdjYWpu10ZEREREREREnMWpYdSlAML3nmf5M+3OfnbCjJ4U9vamUONh7LJnvozj6BjaBnjjHXg/k046O91KZ/WQyvh5e+N98adQ08/Ze4O6ioiIiIiIiIj8G93FPaMM8pdpQsdOnehQtzjuRm7X53YZeJWoTu06dahZxudu3vBOYfGuRMuOnejU7l4KW3O7NiIiIiL/UKkL6VfCB29vX8o+OYszV91vtW1+n9r+F2/EnsrZG7GXbgwHtPmGI44cLeqW2A7NYFDzihQN8Kfok7+ReO0CqfN4KtgH70JNGLHnBneJzTN890Ag3t6BdJl8mhttydS5fQjy8aZQsy9ueMPZPDWJ+wO98Q7syvdnc3CfZGW9/nXsHLg4ssYnsAmfbr96+MV5fn64MN7eflQespr0XKujM9jZ81lTCnn7UOSp37m7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IiLiNHfd0/REREREREREROTfS2GUiIiIiIiIiIg4jcIoERERERERERFxGoVRIiIiIiIiIiLiNAqjRERERERERETEaRRGiYiIiIiIiIiI0yiMEhERERERERERp1EYJSIiIiIiIiIiTqMwSkREREREREREnEZhlIiIiIiIiIiIOI3CKBERERERERERcRoXZxW0efNmZxUlIiIiIiIiIiJ3KcNms5m5XQkREREREREREflv0DA9ERERERERERFxGoVRIiIiIiIiIiLiNAqjRERERERERETEaRRGiYiIiIiIiIiI0yiMEhERERERERERp1EYJSIiIiIiIiIiTqMwSkREREREREREnEZhlIiIiIiIiIiIOI3CKBERERERERERcRqFUSIiIiIiIiIi4jQKo0RERERERERExGkURomIiIiIiIiIiNMojBIREREREREREadRGCUiIiIiIiIiIk6jMEpERERERERERJxGYZSIiIiIiIiIiDiNwigREREREREREXGaXAyjHERMe5iyjT9le/rVfz/PTw8XxtvbO8OPb4WXWZl266XYdo2gWUg3vjvuuFMVFxERERERERGRbHLJtZKTQ/n6yzBqDB5JZdfrX3arNZBvBta6XEEjT0kqZKO2LuV7M7DuWD7+ajUPDm9M3tuqtIiIiIiIiGSHGR/OlJef5YvdzRm/5F3qZtIOvC22TQxt/RhTIuxX/dGC/8OTWPZePe50cSKSfbkURplE/TGWn+Na81WHAIxMlrAE1aBd587kud2iDD/a9ryPt/qN5fdXGtHdP7PSREREREREJKck7fmJIU++yYpEd06nx5Nm5kAh9jMcOZRKpf7D6VXucrcG8pQsjTUHihOR7MudMMo8x6IZSzGbfENjzxsv5khJJNHIQz732xtNmK9he5pYnuaXBad5qFdgpuGXiIiIiIiI5IDkdXz02Lsc7DyBGcW/pfnQnCnGTDhHVHoharTtTOcquTcISET+Xu7MGZW4jqWh6VSpV4t8N1gkdfFzlC1alKJBRal03yAmbYsj2+F53prUr+pgw9K1xGf3M0REREREROTW5anL6wvWMvutpvhj//vls8kRfY5ofPHz0XO6RO52uRIX2w6FszPZn0Yhvpn0UrLiX+1BXm7eiCrFvUg7uoofRo/nlW7ncF86jZ5Fs3FhMbwpWy6A1D+3s9/2ADUUkouIiIiIiDiJgaefL2DmaOcAR0wUMbZIFn46kLCEFCwFgqnS9CF6dq6M8imRu0uuxDL2kxGcwodCfpldEfLT4tXRtLj8+310aFCANs1HMObHXXR/tVI2Km3BL8AXTkVwyk5uTtsuIiIiIiIiOcBarCWPPZ5KnG8R/PKkE7VvNRMHjmfigjHM/7YLRRRIidw1cieWsaWTjgsuWSzdLaQNre8Zzugde0klO2GUgYuLK9htpDtu+c0iIiIiIiJyl7MENuWl4U2v+svLDGj5NI2eGcqE/h15t7p6JYjcLXIlGza8ClKARBISszoLlIndAViMbE4+7iAhPh48C1BAj1EQERERERH5DzDwb9qCatYTHD6SntuVEZGr5EoY5VKyNCWMSI4cy+SCYEvHdk1GlbLrDxYfslCuWiXcM7zi4PjvHzFowPOMCUu6SYnpHD8ciVGiDCUUhouIiIiIiPwn2E8eJ9L0p3CgGoIid5NcOSMtgbWpUzyNP7buxdaxWoZK2HZ+Todnt1OlfUMqFPfBjAzjlwlT2RXwIFMeLUPGjk0OYsLn89P0w7Ro9D796uTNvOeUbT9bwpMp0rIOwRonLCIiIiIi8i9j5+iiyaxyqUX9SqUo4mMhaudCvh7yLYcq9OfrGq65XUERuUruxMMulWjftihjli3j0BvVCLkqYbL4VaZ24AJ+n/gJ38WkYvEqQqVmg/nhnRdp439t1JROxLEzODwqU6+G5w2H8NmPLGPp4SDatq+CLkEiIiIiIiL/NgbEbuTr19/kuZg0TMBw9aF8m/5MHfYSld1yu34icjXDZrt2UJxz2PePok2zmbRYtIzXKmYzE0vfwNt12jOj9hRCx7SjYKZplJ09I5rTfF4Hlix5hfLqnSkiIiIiIvLvZKaTFH2Gs/Em+QOC8M2joTEid6NcOzOtpXvxfPtopk9aTWI2P8N+bB2hpyvQ5/nWNwiigOS1TPrxNG1f6E05BVEiIiIiIiL/XoYreX2LULxEsIIokbtYrvWMArCfWML431Jo2a89pXNo/Jzt0AK+XWilY9/WFNeT9EREREREREREclWuhlEiIiIiIiIiIvLfon6LIiIiIiIiIiLiNAqjRERERERERETEaRRGiYiIiIiIiIiI0yiMEhERERERERERp1EYJSIiIiIiIiIiTqMwSkREREREREREnEZhlIiIiIiIiIiIOI3CKBERERERERERcRqFUSIiIiIiIiIi4jQKo0RERERERERExGkURomIiIiIiIiIiNMojBIREREREREREadRGCUiIiIiIiIiIk6jMEpERERERERERJxGYZSIiIiIiIiIiDiNi7MKio+Pd1ZRIiIiIiIiIiJylzJsNpuZ25UQEREREREREZH/Bg3TExERERERERERp1EYJSIiIiIiIiIiTqMwSkREREREREREnEZhlIiIiIiIiIiIOI3CKBERERERERERcRqFUSIiIiIiIiIi4jQKo0RERERERERExGkURomIiIiIiIiIiNMojBIREREREREREadRGCUiIiIiIiIiIk6jMEpERERERERERJxGYZSIiIiIiIiIiDiNwigREREREREREXEahVEiIiIiIiIiIuI0CqNERERERERERMRpFEaJiIiIiIiIiIjTKIwSERERERERERGnycUwykHEtIcp2/hTtqdnfCVx+3TeH9iDVjVKEeDjS/nBy0m79u1mAju+f4n295YkKKgE1ds+z5Tt8ZjZqUryWl6vVZm+86Kz934RERERERH5B7GTmpyKPberIfIflXthVHIoX38ZRo3+vansevULDmLDZjA9NBq/Ok2oWCCzKppE/fEKPQbPJq3Vu4wd9wHtjPm80uMl5p7NRpyUpy59+xRjwfDx7Ez/+8VFRERERETk1pjx4Uzu24TKjd8nNAfbXTcvJ4X9M4fQrnJRgooUJqhMQ/r8bz3R6pUg4lS5FEaZRP0xlp/jWvNohwCMa6oU1GcmuzctZvqoftQrYFz/dscRfv7qN6JqvcL4oU/QsUMvPhz3Og1if+erHw9mI922UPyBntQ/8j3jVyRmd6VEREREREQkE0l7fmLQfffzRehZTp+LJy2Hwp+/Kydl43B6DZqP19PTCd2+lT9HNOLwiEd5YeYpHDlTJRHJRO6EUeY5Fs1YitmkPY09r3/ZsFjIJIK68vbYUFZuN6l4XyuKXlwDS1Ar7qtqsnPl2myl2oZ/S9rVjmH+jOUk3PrbRUREREREJDPJ6/josXc52G4CM16ujEuulZPMqinTOFr7RT57tgllgotR5f73GPa4F3+Omc4BjdkTcZrcCaMS17E0NJ0q9WqRLxtvt584xNF0N0qUKoLVTCU+PhXTEkDJEnmwHTvEsexcRAxf6tQLIWHVUjZdN0GViIiIiIiIZEueury+YC2z32qKf07O0vR35dj2s2FzHKXr16fw5ZawO1Ua1yP/njWExWisnoiz5EoYZTsUzs5kf0JCfG/aA+pGzLjzxJMPL0/YPqwVZUOa8+lWB/k9PSH+PPHZ6l9ppVj5ENyjwgmPUAdNERERERGRO8PA088Xd8jhB0b9TTn2U0ScgsDgwAwNYWvhYALMCI5HqmuUiLPkShhlPxnBKXwo5Hf7xbsXLEh+L18Kelz6S3birQtc/APw5TQRp3QREhERERER+XdJJSUF3D08MrQaDXcP3EkmMVk9o0ScJceG696ULZ10XHDJZumGVwE8SSQuHsr2m8u+fgCpLIyPB08vPLOZcRkurrhgw5aui5CIiIiIiMi/iuFBnjyQkJqKSd4rgVRaCum44+6W/Y4NInJrcqVnlOFVkAIkkpCYvdDHGlyKYq5pHDkUcWUksOM0h48m41KsFMWs2auXIy6OBLwoWDCXHjIoIiIiIiIiOcNSmKKFDU6fPJ3hyXn2M6c4TQCFC6kdKOIsuXK2uZQsTQkjkiPH0rP1fqNgXZpUMdi1+C+OX7yKOCL/ZPFWg4qN6+NzTaBt3zOd154dyJDvd2C74aeaxB07Qoy1BKWzm2aJiIiIiIjI3cmlNLVrFuBg2CaiLveLsLE3dD3ni9agRoDCKBFnyZWzzRJYmzrF09ixdW+m4ZAZtYO/5s5hzu+rOJjsIOVwKL/PmcPcP8MvXDQsJeg+6H581g/nmTe+Y978H3jnmaGsLtiBQY/cw7VRkv3UemZPn87MsMibPLshjR1bdmJWqEdNT3XPFBERERER+XfxoH6vnhRd/QVv/7SLmJQkItaM5O0JR6j8SHeq5s4kNiL/SblzurlUon3booxZtoxDb1Qj5Jr0yLZ3Ki89OZbjl5KjM8N4ahlYg59hzuZhNHA18G33GdM/e4tXR77L09+ZFKrameE/fUQn/2uDJJPzx08QhyeN6lfG9UZ1St/O0hXnqdCzDSXUMUpERERERORfx/3ewUz89DhPvdGEewbYwNWXqo+OZuKActd1ahCRnGPYbLZcma3bvn8UbZrNpMWiZbxWMSczsWQW9q9Mrw09mLvqI+rmyXyplLWvUe/hfTy3Zia9g9U9U0RERERE5F8r7TyRJ2MxfIIo7HnDLgsikkNyLXWxlu7F8+2jmT5pNYk5WVD6TtZusNHw2X7UvkEQhRnNwom/wUPP85CCKBERERERkX83twIEFS+uIEokl+RazygA+4kljP8thZb92lM6N68ByTv59dtQAnr2pqGeoCAiIiIiIiIikmNyNYwSEREREREREZH/FnUDEhERERERERERp1EYJSIiIiIiIiIiTqMwSkREREREREREnEZhlIiIiIiIiIiIOI3CKBERERERERERcRqFUSIiIiIiIiIi4jQKo0RERERERERExGkURomIiIiIiIiIiNMojBIREREREREREadRGCUiIiIiIiIiIk6jMEpERERERERERJxGYZSIiIiIiIiIiDiNwigREREREREREXEahVEiIiIiIiIiIuI0Ls4qKD4+3llFiYiIiIiIiIjIXcqw2WxmbldCRERERERERET+GzRMT0REREREREREnEZhlIiIiIiIiIiIOI3CKBERERERERERcRqFUSIiIiIiIiIi4jQKo0RERERERERExGkURomIiIiIiIiIiNMojBIREREREREREadRGCUiIiIiIiIiIk6jMEpERERERERERJxGYZSIiIiIiIiIiDiNwigREREREREREXEahVEiIiIiIiIiIuI0CqNERERERERERMRpFEaJiIiIiIiIiIjTKIwSERERERERERGnURglIiIiIiIiIiJOozBKREREREREREScJhfDKAcR0x6mbONP2Z6e8ZXE7dN5f2APWtUoRYCPL+UHLyft2rebCez4/iXa31uSoKASVG/7PFO2x2PmSFVPsGTkEJ7s3JCKRfzwCejI+BOO65dLOcjst7tSt0wQhYtVptlTo1l77trlHJyY/ABlWnzO7vTrP0JEREREROTfypGehj1HGm23yk5qcir2HC7FTE8hOf2uWGGRu0ruhVHJoXz9ZRg1+vemsuvVLziIDZvB9NBo/Oo0oWKBzKpoEvXHK/QYPJu0Vu8ydtwHtDPm80qPl5h7NgdOdNshFk39g31GCE3rFsOa6UJJrP3oEfpNOsW9g79h4ohH8A39iJ7PTOFIhjzKQnD3QXQ8M44R86JyJjwTERERERG5WyQfZMHwZ7ivajECAgIJCK5Ii2e+ISw6Z1pDZnw4k/s2oXLj9wm9rgNACvtnDqFd5aIEFSlMUJmG9Pnfem69KulE/PUBXWpUpte0U9e168yotXz5WD3uCQ6iSOGiVO30Or8dSs32Oon82+RSGGUS9cdYfo5rzaMdAjCuqVJQn5ns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" class="img-fluid" alt="image.png">hidden_layer_sizes Number of hidden layers Neurons in each hidden layer (5,) 1 5 (10,) 1 10 (10, 10) 2 10, 10 (20, 10) 2 20, 10</p>
+<div id="cell-27" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>param_grid <span class="op">=</span> {</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"mlp__hidden_layer_sizes"</span>: [</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">5</span>,),</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">10</span>,),</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">10</span>, <span class="dv">10</span>),</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">20</span>, <span class="dv">10</span>)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"mlp__alpha"</span>: [</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>        <span class="fl">0.0001</span>,</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>        <span class="fl">0.001</span>,</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>        <span class="fl">0.01</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    ], <span class="co">#L2 regularization strength</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"mlp__learning_rate_init"</span>: [</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>        <span class="fl">0.001</span>,</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>        <span class="fl">0.01</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-28" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> GridSearchCV</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>grid_search <span class="op">=</span> GridSearchCV(</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    model,</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    param_grid,</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    cv<span class="op">=</span>cv,</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    scoring<span class="op">=</span><span class="st">"f1"</span>,</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    n_jobs<span class="op">=-</span><span class="dv">1</span> <span class="co">#use all available CPU cores</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Find the best configuration:</p>
+<div id="cell-30" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}}" data-outputid="cd4a0415-6eb2-4120-8c45-fc142bf6c608">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>grid_search.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+<style>#sk-container-id-1 {
+  /* Definition of color scheme common for light and dark mode */
+  --sklearn-color-text: #000;
+  --sklearn-color-text-muted: #666;
+  --sklearn-color-line: gray;
+  /* Definition of color scheme for unfitted estimators */
+  --sklearn-color-unfitted-level-0: #fff5e6;
+  --sklearn-color-unfitted-level-1: #f6e4d2;
+  --sklearn-color-unfitted-level-2: #ffe0b3;
+  --sklearn-color-unfitted-level-3: chocolate;
+  /* Definition of color scheme for fitted estimators */
+  --sklearn-color-fitted-level-0: #f0f8ff;
+  --sklearn-color-fitted-level-1: #d4ebff;
+  --sklearn-color-fitted-level-2: #b3dbfd;
+  --sklearn-color-fitted-level-3: cornflowerblue;
+
+  /* Specific color for light theme */
+  --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
+  --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, white)));
+  --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
+  --sklearn-color-icon: #696969;
+
+  @media (prefers-color-scheme: dark) {
+    /* Redefinition of color scheme for dark theme */
+    --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
+    --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, #111)));
+    --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
+    --sklearn-color-icon: #878787;
+  }
+}
+
+#sk-container-id-1 {
+  color: var(--sklearn-color-text);
+}
+
+#sk-container-id-1 pre {
+  padding: 0;
+}
+
+#sk-container-id-1 input.sk-hidden--visually {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#sk-container-id-1 div.sk-dashed-wrapped {
+  border: 1px dashed var(--sklearn-color-line);
+  margin: 0 0.4em 0.5em 0.4em;
+  box-sizing: border-box;
+  padding-bottom: 0.4em;
+  background-color: var(--sklearn-color-background);
+}
+
+#sk-container-id-1 div.sk-container {
+  /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
+     but bootstrap.min.css set `[hidden] { display: none !important; }`
+     so we also need the `!important` here to be able to override the
+     default hidden behavior on the sphinx rendered scikit-learn.org.
+     See: https://github.com/scikit-learn/scikit-learn/issues/21755 */
+  display: inline-block !important;
+  position: relative;
+}
+
+#sk-container-id-1 div.sk-text-repr-fallback {
+  display: none;
+}
+
+div.sk-parallel-item,
+div.sk-serial,
+div.sk-item {
+  /* draw centered vertical line to link estimators */
+  background-image: linear-gradient(var(--sklearn-color-text-on-default-background), var(--sklearn-color-text-on-default-background));
+  background-size: 2px 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Parallel-specific style estimator block */
+
+#sk-container-id-1 div.sk-parallel-item::after {
+  content: "";
+  width: 100%;
+  border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
+  flex-grow: 1;
+}
+
+#sk-container-id-1 div.sk-parallel {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background-color: var(--sklearn-color-background);
+  position: relative;
+}
+
+#sk-container-id-1 div.sk-parallel-item {
+  display: flex;
+  flex-direction: column;
+}
+
+#sk-container-id-1 div.sk-parallel-item:first-child::after {
+  align-self: flex-end;
+  width: 50%;
+}
+
+#sk-container-id-1 div.sk-parallel-item:last-child::after {
+  align-self: flex-start;
+  width: 50%;
+}
+
+#sk-container-id-1 div.sk-parallel-item:only-child::after {
+  width: 0;
+}
+
+/* Serial-specific style estimator block */
+
+#sk-container-id-1 div.sk-serial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--sklearn-color-background);
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+
+/* Toggleable style: style used for estimator/Pipeline/ColumnTransformer box that is
+clickable and can be expanded/collapsed.
+- Pipeline and ColumnTransformer use this feature and define the default style
+- Estimators will overwrite some part of the style using the `sk-estimator` class
+*/
+
+/* Pipeline and ColumnTransformer style (default) */
+
+#sk-container-id-1 div.sk-toggleable {
+  /* Default theme specific background. It is overwritten whether we have a
+  specific estimator or a Pipeline/ColumnTransformer */
+  background-color: var(--sklearn-color-background);
+}
+
+/* Toggleable label */
+#sk-container-id-1 label.sk-toggleable__label {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+#sk-container-id-1 label.sk-toggleable__label .caption {
+  font-size: 0.6rem;
+  font-weight: lighter;
+  color: var(--sklearn-color-text-muted);
+}
+
+#sk-container-id-1 label.sk-toggleable__label-arrow:before {
+  /* Arrow on the left of the label */
+  content: "▸";
+  float: left;
+  margin-right: 0.25em;
+  color: var(--sklearn-color-icon);
+}
+
+#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {
+  color: var(--sklearn-color-text);
+}
+
+/* Toggleable content - dropdown */
+
+#sk-container-id-1 div.sk-toggleable__content {
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
+  text-align: left;
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-1 div.sk-toggleable__content.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+#sk-container-id-1 div.sk-toggleable__content pre {
+  margin: 0.2em;
+  border-radius: 0.25em;
+  color: var(--sklearn-color-text);
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-1 div.sk-toggleable__content.fitted pre {
+  /* unfitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+  /* Expand drop-down */
+  max-height: 200px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+  content: "▾";
+}
+
+/* Pipeline/ColumnTransformer-specific style */
+
+#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-1 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Estimator-specific style */
+
+/* Colorize estimator box */
+#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-1 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+#sk-container-id-1 div.sk-label label.sk-toggleable__label,
+#sk-container-id-1 div.sk-label label {
+  /* The background is the default theme color */
+  color: var(--sklearn-color-text-on-default-background);
+}
+
+/* On hover, darken the color of the background */
+#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+/* Label box, darken color on hover, fitted */
+#sk-container-id-1 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Estimator label */
+
+#sk-container-id-1 div.sk-label label {
+  font-family: monospace;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 1.2em;
+}
+
+#sk-container-id-1 div.sk-label-container {
+  text-align: center;
+}
+
+/* Estimator-specific */
+#sk-container-id-1 div.sk-estimator {
+  font-family: monospace;
+  border: 1px dotted var(--sklearn-color-border-box);
+  border-radius: 0.25em;
+  box-sizing: border-box;
+  margin-bottom: 0.5em;
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-1 div.sk-estimator.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+/* on hover */
+#sk-container-id-1 div.sk-estimator:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-1 div.sk-estimator.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Specification for estimator info (e.g. "i" and "?") */
+
+/* Common style for "i" and "?" */
+
+.sk-estimator-doc-link,
+a:link.sk-estimator-doc-link,
+a:visited.sk-estimator-doc-link {
+  float: right;
+  font-size: smaller;
+  line-height: 1em;
+  font-family: monospace;
+  background-color: var(--sklearn-color-background);
+  border-radius: 1em;
+  height: 1em;
+  width: 1em;
+  text-decoration: none !important;
+  margin-left: 0.5em;
+  text-align: center;
+  /* unfitted */
+  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
+  color: var(--sklearn-color-unfitted-level-1);
+}
+
+.sk-estimator-doc-link.fitted,
+a:link.sk-estimator-doc-link.fitted,
+a:visited.sk-estimator-doc-link.fitted {
+  /* fitted */
+  border: var(--sklearn-color-fitted-level-1) 1pt solid;
+  color: var(--sklearn-color-fitted-level-1);
+}
+
+/* On hover */
+div.sk-estimator:hover .sk-estimator-doc-link:hover,
+.sk-estimator-doc-link:hover,
+div.sk-label-container:hover .sk-estimator-doc-link:hover,
+.sk-estimator-doc-link:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+div.sk-estimator.fitted:hover .sk-estimator-doc-link.fitted:hover,
+.sk-estimator-doc-link.fitted:hover,
+div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
+.sk-estimator-doc-link.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+/* Span, style for the box shown on hovering the info icon */
+.sk-estimator-doc-link span {
+  display: none;
+  z-index: 9999;
+  position: relative;
+  font-weight: normal;
+  right: .2ex;
+  padding: .5ex;
+  margin: .5ex;
+  width: min-content;
+  min-width: 20ex;
+  max-width: 50ex;
+  color: var(--sklearn-color-text);
+  box-shadow: 2pt 2pt 4pt #999;
+  /* unfitted */
+  background: var(--sklearn-color-unfitted-level-0);
+  border: .5pt solid var(--sklearn-color-unfitted-level-3);
+}
+
+.sk-estimator-doc-link.fitted span {
+  /* fitted */
+  background: var(--sklearn-color-fitted-level-0);
+  border: var(--sklearn-color-fitted-level-3);
+}
+
+.sk-estimator-doc-link:hover span {
+  display: block;
+}
+
+/* "?"-specific style due to the `<a>` HTML tag */
+
+#sk-container-id-1 a.estimator_doc_link {
+  float: right;
+  font-size: 1rem;
+  line-height: 1em;
+  font-family: monospace;
+  background-color: var(--sklearn-color-background);
+  border-radius: 1rem;
+  height: 1rem;
+  width: 1rem;
+  text-decoration: none;
+  /* unfitted */
+  color: var(--sklearn-color-unfitted-level-1);
+  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
+}
+
+#sk-container-id-1 a.estimator_doc_link.fitted {
+  /* fitted */
+  border: var(--sklearn-color-fitted-level-1) 1pt solid;
+  color: var(--sklearn-color-fitted-level-1);
+}
+
+/* On hover */
+#sk-container-id-1 a.estimator_doc_link:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+#sk-container-id-1 a.estimator_doc_link.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-3);
+}
+</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>GridSearchCV(cv=StratifiedKFold(n_splits=5, random_state=42, shuffle=True),
+             estimator=Pipeline(steps=[('scaler', StandardScaler()),
+                                       ('mlp',
+                                        MLPClassifier(hidden_layer_sizes=(10,
+                                                                          10),
+                                                      max_iter=1000,
+                                                      random_state=42))]),
+             n_jobs=-1,
+             param_grid={'mlp__alpha': [0.0001, 0.001, 0.01],
+                         'mlp__hidden_layer_sizes': [(5,), (10,), (10, 10),
+                                                     (20, 10)],
+                         'mlp__learning_rate_init': [0.001, 0.01]},
+             scoring='f1')</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox"><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>GridSearchCV</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.model_selection.GridSearchCV.html">?<span>Documentation for GridSearchCV</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>GridSearchCV(cv=StratifiedKFold(n_splits=5, random_state=42, shuffle=True),
+             estimator=Pipeline(steps=[('scaler', StandardScaler()),
+                                       ('mlp',
+                                        MLPClassifier(hidden_layer_sizes=(10,
+                                                                          10),
+                                                      max_iter=1000,
+                                                      random_state=42))]),
+             n_jobs=-1,
+             param_grid={'mlp__alpha': [0.0001, 0.001, 0.01],
+                         'mlp__hidden_layer_sizes': [(5,), (10,), (10, 10),
+                                                     (20, 10)],
+                         'mlp__learning_rate_init': [0.001, 0.01]},
+             scoring='f1')</pre></div> </div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox"><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>best_estimator_: Pipeline</div></div></label><div class="sk-toggleable__content fitted"><pre>Pipeline(steps=[('scaler', StandardScaler()),
+                ('mlp',
+                 MLPClassifier(hidden_layer_sizes=(10,),
+                               learning_rate_init=0.01, max_iter=1000,
+                               random_state=42))])</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox"><label for="sk-estimator-id-3" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>StandardScaler</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.preprocessing.StandardScaler.html">?<span>Documentation for StandardScaler</span></a></div></label><div class="sk-toggleable__content fitted"><pre>StandardScaler()</pre></div> </div></div><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox"><label for="sk-estimator-id-4" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>MLPClassifier</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.neural_network.MLPClassifier.html">?<span>Documentation for MLPClassifier</span></a></div></label><div class="sk-toggleable__content fitted"><pre>MLPClassifier(hidden_layer_sizes=(10,), learning_rate_init=0.01, max_iter=1000,
+              random_state=42)</pre></div> </div></div></div></div></div></div></div></div></div></div></div>
+</div>
+</div>
+<p>GridSearchCV already trained using best parameters</p>
+<div id="cell-32" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="e80c7c57-70e4-43f9-b680-177891feba5a">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Best parameters:"</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(grid_search.best_params_)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Best CV F1-score:"</span>) <span class="co">#mean cross-validation score for the best-performing hyperparameter combination</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(grid_search.best_score_)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Best parameters:
+{'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (10,), 'mlp__learning_rate_init': 0.01}
+
+Best CV F1-score:
+0.9824018776972363</code></pre>
+</div>
+</div>
+<div id="cell-33" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="d5de8ca8-e5b1-4ecf-e71d-7b88c3513b1d">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> accuracy_score, classification_report</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>best_model <span class="op">=</span> grid_search.best_estimator_</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>y_test_pred <span class="op">=</span> best_model.predict(X_test)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>accuracy <span class="op">=</span> accuracy_score(y_test, y_test_pred)</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Best MLP Model:"</span>)</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(best_model)</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Best Parameters:"</span>)</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(grid_search.best_params_)</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Test Accuracy:"</span>, accuracy)</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Best MLP Model:
+Pipeline(steps=[('scaler', StandardScaler()),
+                ('mlp',
+                 MLPClassifier(hidden_layer_sizes=(10,),
+                               learning_rate_init=0.01, max_iter=1000,
+                               random_state=42))])
+
+Best Parameters:
+{'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (10,), 'mlp__learning_rate_init': 0.01}
+
+Test Accuracy: 0.97</code></pre>
+</div>
+</div>
+<pre><code># This is formatted as code
+**bold text**```
+
+Visualize the decision boundary
+
+::: {#cell-35 .cell quarto-private-1='{"key":"colab","value":{"base_uri":"https://localhost:8080/","height":641}}' outputId='eeff88fb-c46b-45cf-d07c-13314efddca4'}
+``` {.python .cell-code}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Best model selected by GridSearchCV
+best_model = grid_search.best_estimator_
+
+# Create a mesh/grid covering the dataset
+x_min = X[:, 0].min() - 0.5
+x_max = X[:, 0].max() + 0.5
+y_min = X[:, 1].min() - 0.5
+y_max = X[:, 1].max() + 0.5
+
+xx, yy = np.meshgrid(
+    np.linspace(x_min, x_max, 500),
+    np.linspace(y_min, y_max, 500)
+)
+
+# Predict the class for every point in the grid
+grid_points = np.c_[xx.ravel(), yy.ravel()] #number of points × number of features
+
+Z = best_model.predict(grid_points)
+Z = Z.reshape(xx.shape)
+
+# --------------------------------------------------
+# Plot
+# --------------------------------------------------
+plt.figure(figsize=(9, 7))
+
+# Decision boundary: color regions according to the model's predictions.
+plt.contourf(
+    xx,
+    yy,
+    Z,
+    cmap="coolwarm",
+    alpha=0.3
+)
+
+# Test data
+scatter = plt.scatter(
+    X_test[:, 0],
+    X_test[:, 1],
+    c=y_test,
+    cmap="coolwarm",
+    edgecolors="black",
+    s=50
+)
+
+plt.title("Best MLP Model - Moon Dataset")
+plt.xlabel("Feature 1")
+plt.ylabel("Feature 2")
+
+plt.colorbar(scatter, label="Actual Class")
+
+plt.show()
+</code></pre>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="MLE_module3_ex1_files/figure-html/cell-19-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<p>:::</p>
+<a href="https://www.ace-net.ca/">
+
+
+</a></main><a href="https://www.ace-net.ca/"> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</a></div><a href="https://www.ace-net.ca/"> <!-- /content -->
+
+
+
+
+</a></body></html>
